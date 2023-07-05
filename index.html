@@ -1,23 +1,20 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>reCAPTCHA demo:</title>
-    <script type="text/javascript">
-      var onloadCallback = function() {
-        grecaptcha.render('html_element', {
-          'sitekey' : '6Ldcw_kmAAAAAH4yuQVhd0HBzYydQeyZkKQzvq9k'
-        });
-      };
-    </script>
-  </head>
-  <body>
-    <form action="?" method="POST">
-      <div id="html_element"></div>
-      <br>
-      <input type="submit" value="Submit">
-    </form>
-    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
-        async defer>
-    </script>
-  </body>
+<head>
+<title>Google reCAPTCHA test</title>
+<meta charset=utf-8>
+<script src='https://www.google.com/recaptcha/api.js'></script>
+</head>
+   <script>
+   function onSubmit(token) {
+     document.getElementById("demo-form").submit();
+   }
+ </script>
+<body>
+<h1>Google reCAPTCHA test</h1>
+  <button class="g-recaptcha" 
+        data-sitekey="6Ldcw_kmAAAAAH4yuQVhd0HBzYydQeyZkKQzvq9k" 
+        data-callback='onSubmit' 
+        data-action='submit'>Submit</button>
+</body>
 </html>
