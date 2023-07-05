@@ -12,9 +12,11 @@
  </script>
 <body>
 <h1>Google reCAPTCHA test</h1>
-  <button class="g-recaptcha" 
-        data-sitekey="6Ldcw_kmAAAAAH4yuQVhd0HBzYydQeyZkKQzvq9k" 
-        data-callback='onSubmit' 
-        data-action='submit'>Submit</button>
+    <form action="/" method="GET">
+      <div class="g-recaptcha" data-sitekey="6Ldcw_kmAAAAAH4yuQVhd0HBzYydQeyZkKQzvq9k"></div>
+      <br/>
+      <input type="submit" value="Submit">
+    </form>
+  
 </body>
 </html>
